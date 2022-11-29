@@ -13,11 +13,11 @@ void setup()
 void loop()
 {
     float temperature = MySignals.getTemperature();
-    Serial.print("Current position : <2_");
+    Serial.print("Temperature (*C): <1_");
     Serial.print(temperature, 2);
     Serial.print("_1>");
     uint8_t position = MySignals.getBodyPosition();
-    Serial.print("Current position : <");
+    Serial.print("Current position : <2_");
     // print body position
     // MySignals.printPosition(position);
     if (position == 1)
@@ -44,8 +44,35 @@ void loop()
     {
         Serial.print(F("non-defined position"));
     }
-    Serial.println("_2>");
-    delay(100);
+    Serial.print("_2>");
+    float conductance = MySignals.getGSR(CONDUCTANCE);
+    float resistance = MySignals.getGSR(RESISTANCE);
+    float conductanceVol = MySignals.getGSR(VOLTAGE);
+
+    Serial.print("<3_");
+    // Serial.print("Conductance : <3.1_");
+    Serial.print("<3.1_C:");
+    Serial.print(conductance, 2);
+    Serial.print("_3.1>");
+
+    // Serial.print("Resistance : <3.2_");
+    Serial.print("<3.2_R:");
+    Serial.print(resistance, 2);
+    Serial.print("_3.2>");
+
+    // Serial.print("Conductance Voltage : <3.3_");
+    Serial.print("<3.3_V:");
+    Serial.print(conductanceVol, 4);
+    Serial.print("_3.3>");
+
+    Serial.print("_3>");
+
+    float air = MySignals.getAirflow(VOLTAGE);
+    Serial.print("<4_");
+    Serial.print(air, 2);
+    Serial.println("_4>");
+
+    // delay(100);
 
     // print acc values
     MySignals.getAcceleration();
@@ -64,5 +91,5 @@ void loop()
     //         y_acc_string, z_acc_string);
     // Serial.println(bufferAcc);
 
-    delay(1000);
+    delay(700);
 }
