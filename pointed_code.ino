@@ -51,17 +51,20 @@ void loop()
 
     Serial.print("<3_");
     // Serial.print("Conductance : <3.1_");
-    Serial.print("<3.1_C:");
+    // Serial.print("<3.1_C:");
+    Serial.print("<3.1_");
     Serial.print(conductance, 2);
     Serial.print("_3.1>");
 
     // Serial.print("Resistance : <3.2_");
-    Serial.print("<3.2_R:");
+    // Serial.print("<3.2_R:");
+    Serial.print("<3.2_");
     Serial.print(resistance, 2);
     Serial.print("_3.2>");
 
     // Serial.print("Conductance Voltage : <3.3_");
-    Serial.print("<3.3_V:");
+    // Serial.print("<3.3_V:");
+    Serial.print("<3.3_");
     Serial.print(conductanceVol, 4);
     Serial.print("_3.3>");
 
