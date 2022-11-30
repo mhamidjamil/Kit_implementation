@@ -1,4 +1,5 @@
-
+//code send output to python script, which will filter out values 
+// and send those values to esp32 which upload that data on firebase
 #include "SPI.h"
 #include <MySignals.h>
 #include <Wire.h>
@@ -94,5 +95,5 @@ void loop()
     //         y_acc_string, z_acc_string);
     // Serial.println(bufferAcc);
 
-    delay(700);
+    delay(1000);
 }
