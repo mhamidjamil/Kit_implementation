@@ -1,4 +1,4 @@
-// arduino listen at pin 2 and 3 and print on screen
+// arduino listen at pin 2 and 3 (data coming from MySignal kit) and print on screen
 
 #include <SoftwareSerial.h>
 
