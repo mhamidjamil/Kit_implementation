@@ -24,6 +24,7 @@ void setup()
     Serial.begin(115200);
     MySignals.begin();
     MySignals.initBodyPosition();
+    // Serial.print("Reading Data : ");
 }
 void loop()
 {
@@ -101,7 +102,7 @@ void loop()
     // Serial.print(air, 2);
     mysignalData.snore_voltages[mysignalData.index] = air;
     // Serial.println("_4>");
-
+// Serial.print(".");
     MySignals.getAcceleration();
     mysignalData.index++;
     if (mysignalData.index == 5)
@@ -133,4 +134,5 @@ void manage_input_data()
     Serial.print("!");
     Serial.print(mysignalData.snore_voltages[0], 4);
     Serial.println("!#");
+    // Serial.print("Reading Data : ");
 }
