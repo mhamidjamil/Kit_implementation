@@ -37,22 +37,22 @@ void loop() {
   // MySignals.printPosition(position);
   if (position == 1) {
     // Serial.print(F("Prone position"));
-    mysignalData.position = "Prone position";
+    mysignalData.position = "Prone_position";
   } else if (position == 2) {
     // Serial.print(F("Left lateral decubitus"));
-    mysignalData.position = "Left lateral decubitus";
+    mysignalData.position = "Left_lateral_decubitus";
   } else if (position == 3) {
     // Serial.print(F("Rigth lateral decubitus"));
-    mysignalData.position = "Rigth lateral decubitus";
+    mysignalData.position = "Rigth_lateral_decubitus";
   } else if (position == 4) {
     // Serial.print(F("Supine position"));
-    mysignalData.position = "Supine position";
+    mysignalData.position = "Supine_position";
   } else if (position == 5) {
     // Serial.print(F("Stand or sit position"));
-    mysignalData.position = "Stand or sit position";
+    mysignalData.position = "Stand_or_sit_position";
   } else {
     // Serial.print(F("non-defined position"));
-    mysignalData.position = "non-defined position";
+    mysignalData.position = "non-defined_position";
   }
   // Serial.print("_2>");
   float conductance = MySignals.getGSR(CONDUCTANCE);
@@ -126,7 +126,7 @@ void manage_input_data() {
        mysignalData.snore_voltages[2] + mysignalData.snore_voltages[3] +
        mysignalData.snore_voltages[4]) /
       5;
-  Serial.print("SKdRiOAIL4NMiAkgrfmq");
+  Serial.print("3a2v3Vlb5UD6RFx0Eyg3");
   Serial.print("@");
   Serial.print(mysignalData.temperature[0], 2);
   Serial.print("!");
